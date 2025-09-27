@@ -15,7 +15,8 @@ def send_req():
     body = {
         "message": "ping"
     }
-    r = requests.post("http://localhost:8080/stub/ping", json=body, headers=header).json()
+
+    r = requests.post("http://localhost:8080/stub/ping", json=body).json()
 
     answer = json.dumps(r, indent=4, ensure_ascii=False)
     time_r_end = time.time()
